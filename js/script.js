@@ -1,19 +1,4 @@
 $(function() {
-  // window.addEventListener("DOMContentLoaded", function() {
-  //     window.onscroll = function (){
-  //       var myFade = document.getElementsByClassName("fadein");
-  //       for(var i = 0; i < myFade.length; i++){
-  //         var targetElement = myFade[i].getBoundingClientRect(); //ターゲット要素の高さ
-  //         var scroll = document.documentElement.scrollTop || document.body.scrollTop;  //スクロール
-  //         var windowHeight = window.innerHeight;  //ウィンドウの高さ
-  //         if (scroll > scroll + targetElement.top - windowHeight + 200){
-  //           myFade[i].style.opacity = "1";
-  //           myFade[i].style.transform = "translateY(0)";
-  //         }
-  //       }
-  //     }
-  // }, false);
-
   $(window).on('load', function() {
     var locUrl = location.href;
     var setHash = locUrl.split('#');
@@ -64,20 +49,28 @@ $(function() {
     }
   });
 
-  $('.gnav-hamburger').click(function() {
-    // $(this).toggleClass('active');
-    $(".gnav").toggleClass('active');
+// $("nav").hide();
+// $(".gnav-hamburger").click(function(){//メニューボタンをクリックしたとき
+//     $("nav").toggle(300);//0.3秒で表示したり非表示にしたりする
+//
+// });
 
+  $('.gnav-hamburger').click(function() {
+    $(".gnav").toggleClass('active');
     if ($(".gnav").hasClass('active')) {
-      // if ($(this).hasClass('active')) {
       $('.gnav-list').addClass('active');
       $('.gnav-hamburger').addClass('active');
-      // $('.gnav').addClass('active');
     } else {
       $('.gnav-list').removeClass('active');
       $('.gnav-hamburger').removeClass('active');
-      // $('.gnav').removeClass('active');
     }
+  });
+
+  $('.gnav-item').click(function() {
+    $(".gnav").removeClass('active');
+      $('.gnav-list').removeClass('active');
+      $('.gnav-hamburger').removeClass('active');
+
   });
 
   $('.faq-acoordion').click(function() {

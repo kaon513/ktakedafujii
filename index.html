@@ -4,18 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>design conslutingLP</title>
+  <title>K Takeda Fujii</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
-  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script> -->
-  <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css"> -->
-
-
 </head>
 
 <body>
@@ -27,10 +21,10 @@
   <!-- header -->
   <header class="header">
     <div class="header-inner">
-      <p class="header-ttl">Bold Consulting Service</p>
-      <!-- gnav -->
-      <nav class="gnav">
+      <p class="header-ttl"><span>K Takeda Fujii</span></p>
 
+      <!-- gnav -->
+      <div class="gnav">
         <!-- hamburger -->
         <div class="gnav-hamburger">
           <span>MENU</span>
@@ -38,17 +32,18 @@
           <span></span>
         </div><!-- /hamburger -->
 
-        <ul class="gnav-list">
-          <li class="gnav-item"><a href="#about">ABOUT</a></li>
-          <li class="gnav-item"><a href="#service">SERVICE</a></li>
-          <li class="gnav-item"><a href="#flow">FLOW</a></li>
-          <li class="gnav-item"><a href="#members">MEMBERS</a></li>
-          <li class="gnav-item"><a href="#faq">FAQ</a></li>
-          <li class="gnav-item"><a href="#contact">CONTACT</a></li>
-          <li class="gnav-item"><a href="#company">COMPANY</a></li>
-        </ul>
-
-      </nav><!-- /gnav -->
+        <nav>
+          <ul class="gnav-list">
+            <li class="gnav-item"><a href="#about">ABOUT</a></li>
+            <li class="gnav-item"><a href="#service">SERVICE</a></li>
+            <li class="gnav-item"><a href="#flow">FLOW</a></li>
+            <li class="gnav-item"><a href="#members">MEMBERS</a></li>
+            <li class="gnav-item"><a href="#faq">FAQ</a></li>
+            <li class="gnav-item"><a href="#contact">CONTACT</a></li>
+            <li class="gnav-item"><a href="#company">COMPANY</a></li>
+          </ul>
+        </nav>
+      </div><!-- /gnav -->
     </div>
   </header><!-- /header -->
 
@@ -58,7 +53,7 @@
     <!-- top -->
     <section class="top" id="top">
 
-      <a href="#contact" class="top-btn">相談してみる <img src="./img/email.svg" alt="email"> </a>
+      <a href="#contact" class="top-btn">お問い合わせ<img src="./img/email.svg" alt="email"> </a>
 
       <!-- side -->
       <div class="side">
@@ -71,10 +66,10 @@
 
       <div class="top-inner">
         <p class="top-right-txt">©my portfolio</p>
-        <h1 class="top-ttl">
-          <p>大胆に</p>
-          <p>ゴールまで</p>
-          <p class=" _colorBlack">たどり着きます</p>
+        <h1 class="top-ttl text-reveal">
+          <span>大胆に</span>
+          <span>ゴールまで</span>
+          <span class=" _colorBlack">たどり着きます</span>
         </h1>
         <p class="top-txt">Design consulting</p>
       </div>
@@ -441,20 +436,18 @@
     </section><!-- /faq -->
 
     <!-- contact -->
-    <section class="contact" id="contact">
-      <div class="contact-wrapper">
+    <section class="contact" >
+      <div class="contact-wrapper" id="contact">
         <h2 class="contact-ttl">CONTACT</h2>
         <p class="contact-txt">問い合わせはこちらより</p>
 
         <div class="contact-form">
-          <form class="form" action="index.html" method="post">
-            <input id="" type="text" name="" value="" placeholder="会社名 *">
-            <input id="" type="text" name="" value="" placeholder="ご担当者名 *">
-            <input id="" type="text" name="" value="" placeholder="役職">
-            <input id="" type="email" name="" value="" placeholder="メールアドレス *">
-            <input id="" type="tel" name="" value="" placeholder="電話番号">
-            <textarea name="name" rows="8" cols="80" placeholder="問い合わせ内容 *"></textarea>
-            <button type="button" name="button" class="contact-btn">送　信</button>
+          <form class="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdEsS8kl2OslGJrS3NNkxOvY1o8HwKUhDGjukrd5F0i9Cy_sA/formResponse" method="post">
+
+            <input id="" type="text" name="entry.688151930" value="" placeholder="お名前 *">
+            <input id="" type="email" name="entry.2081742230" value="" placeholder="メールアドレス *">
+            <textarea name="entry.757535537" rows="8" cols="80" placeholder="問い合わせ内容 *"></textarea>
+            <button type="submit" name="button" class="contact-btn">送　信</button>
           </form>
         </div>
       </div>
