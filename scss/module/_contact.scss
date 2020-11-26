@@ -1,0 +1,50 @@
+.contact {
+  position: relative;
+  padding: 173px 0 122px;
+  @include max-screen($break_sp) {
+    padding-top: 59px;
+  }
+  @include padding-size_calc(2rem, 13.8rem, 20px, 138px);
+  background-color: #2A84AC;
+
+  &-wrapper {
+    max-width: 1004px;
+    margin: 0 auto;
+  }
+
+  &-ttl {
+    @include ttl;
+  }
+
+  &-txt {
+    @include txt(20);
+    color: #FEE757;
+    margin-bottom: 60px;
+  }
+
+  input,
+  textarea {
+    background-color: #fff;
+    display: block;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+
+  input {
+    width: 670px;
+    @include max-screen(780px) {
+      width: 100%;
+    }
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+  &-btn {
+    background-color: #FECF07;
+    border-radius: 80px;
+    width: 100%;
+    padding: 15px 0;
+  }
+}

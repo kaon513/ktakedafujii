@@ -1,0 +1,143 @@
+.service {
+  // @include padding_size_calc(2rem, 13.8rem, 20px, 138px);
+  max-width: 1280px;
+  padding: 80px 13.8rem 114px;
+  margin: 0 auto;
+  @include padding_size_calc(2rem, 13.8rem, 20px, 138px);
+
+  &-ttl {
+    @include ttl;
+  }
+
+  &-container {
+    display: flex;
+    position: relative;
+    @include max-screen($break_sp) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .sp-mt-50 {
+    @include max-screen($break_sp) {
+      margin-top: 50px;
+    }
+  }
+
+  &-col {
+    width: 56%;
+    @include max-screen($break_sp) {
+      width: 100%;
+    }
+  }
+
+  &-img {
+    z-index: 1;
+    // width: 66%;
+    // width: 58.5%;
+    margin-left: -13.8rem;
+    @include size_calc(margin-left, -2rem, -13.8rem, -20px, -138px);
+    // @include max-screen($break_sp) {
+    //   width: 100%;
+    // }
+    width: 125%;
+    @include max-screen($break_sp) {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &-number-img {
+    z-index: 1;
+  }
+
+  &-heading {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include max-screen($break_sp) {
+      position: static;
+    }
+
+    &-ttl {
+      font-family: $sub_font;
+      color: $txt_color;
+      font-size: 38px;
+      padding-bottom: 18px;
+      // @include font_size_calc(2.4rem ,3.8rem, 24px, 38px);
+      @include font_size_calc(1.6rem ,3.8rem, 16px, 38px);
+      letter-spacing: 0.07em;
+      line-height: 1.4;
+      @include max-screen($break_sp) {
+        font-size: 24px;
+        line-height: 1.58;
+      }
+      @include min-screen($break_pc) {
+        font-size: 38px;
+      }
+    }
+  }
+
+  &-txt {
+    @include txt(18);
+  }
+
+  &-number {
+    position: absolute;
+    bottom: 30px;
+    z-index: 2;
+    width: 64%;
+    @include main_font();
+    @include font_size_calc(9rem ,25rem, 90px, 250px);
+    // color: $title_color;
+    color: transparent;
+    -webkit-text-stroke: 2px $title_color;
+    @include max-screen($break_sp) {
+      bottom: -30px;
+    }
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 127px auto;
+  }
+
+  &-item {
+    letter-spacing: 0;
+    width: 25%;
+    @include max-screen($break_sp) {
+      width: 50%;
+    }
+  }
+
+  &-content {
+    text-align: center;
+
+    img {
+      width: 50%;
+    }
+
+    &-item {
+      text-align: left;
+      font-family: $sub_font;
+      font-size: 12px;
+      line-height: 2;
+      letter-spacing: 0.04em;
+      position: relative;
+      @include max-screen($break_sp) {
+        display: none;
+      }
+
+      &::before {
+        content: "";
+        background-image: url("../img/triangle.png");
+        width: 10px;
+        height: 9px;
+        position: absolute;
+        left: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}

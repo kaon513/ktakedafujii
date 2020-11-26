@@ -1,0 +1,79 @@
+.company {
+  position: relative;
+  padding: 103px 0 240px;
+  @include max-screen($break_sp) {
+    padding-bottom: 52px;
+  }
+  // @include padding-size_calc(2rem, 13.8rem, 20px, 138px);
+  background-color: #2A84AC;
+
+  &-wrapper {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  &-inner {
+    flex: 1;
+  }
+
+  &-ttl {
+    @include ttl;
+  }
+
+  &-content {
+    background-color: #fff;
+    padding: 100px;
+    margin-top: 28px;
+    @include padding-size_calc(2.2rem, 12.3rem, 22px, 123px);
+    @include size_calc(padding-top, 3.4rem, 10.6rem, 34px, 106px);
+    @include size_calc(padding-bottom ,5.1rem, 10.5rem, 51px, 105px);
+  }
+
+  &-tbl {
+    // margin-top:28px;
+    // margin: 100px;
+    // margin: 0 auto;
+    // max-width: 896px;
+    border-collapse: collapse;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 21px;
+    line-height: 1.5;
+    @include max-screen($break_sp) {
+      border-spacing: 10px;
+    }
+
+    span {
+      display: inline-block;
+    }
+
+    th {
+      border-bottom: 1px solid #C4C4C4;
+      text-align: right;
+      padding: 25px 0;
+    }
+
+    td {
+      width: 80%;
+      padding: 25px 0;
+    }
+
+    th + td {
+      border-bottom: 1px solid #C4C4C4;
+    }
+
+    tr:last-of-type {
+      td,
+      th {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &-td {
+    span {
+      display: block;
+    }
+  }
+}

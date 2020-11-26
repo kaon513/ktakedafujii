@@ -1,0 +1,143 @@
+.top {
+  display: flex;
+  padding-bottom: 310px;
+  position: relative;
+  // overflow: hidden;
+  @include max-screen($break_sp) {
+    padding-bottom: 90px;
+  }
+
+  &::before {
+    content: "";
+    // height: 500px;
+    // height: 40vw;
+    height: 50%;
+    width: 100%;
+    // background-color: #fff;
+    background-color: rgba(#2A84AC, 0.38);
+    position: absolute;
+    // z-index:1;
+    // top: 0;
+    bottom: 0px;
+    left: 0;
+  }
+
+  &-btn {
+    position: fixed;
+    z-index: 10;
+    bottom: 40px;
+    right: 40px;
+    background-color: #222222;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    display: inline-block;
+    padding: 20px 70px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    border-radius: 0.5rem;
+    border-radius: 100vh;
+    @include max-screen($break_sp) {
+      bottom: 10px;
+      right: 10px;
+          padding: 17px 40px;
+    }
+    img {
+      // height: 100vh;
+      // height: 21px;
+      // display: inline-block;
+      padding-left: 20px;
+      width: auto;
+      vertical-align: middle;
+      @include max-screen($break_sp) {
+      padding-left: 17px;
+      }
+    }
+
+    &:hover {
+      color: #fff;
+      background: #f56500;
+    }
+  }
+
+  &-inner {
+    flex: 1;
+    background-image: url("../img/top_img.png");
+    background-size: cover;
+    background-position: center center;
+    // position: relative;
+    // color: #fff;
+    height: 654px;
+    position: relative;
+    @include max-screen($break_sp) {
+      height: 320px;
+      margin-top: 120px;
+    }
+  }
+
+  &-ttl {
+    position: absolute;
+    bottom: -100px;
+    @include size_calc(bottom,-3.6rem ,-10rem, -36px, -100px);
+    padding: 0 10%;
+    // font-family: $main_font;
+    font-size: 100px;
+    @include font_size_calc(3.6rem ,10rem, 36px, 100px);
+    letter-spacing: 0.12em;
+    line-height: 1.05;
+    color: #fff;
+    @include max-screen($break_sp) {
+      padding: 0;
+      top: -106px;
+      color: $txt_color;
+      line-height: 1.55;
+    }
+    @include min-screen($break_pc) {
+      padding: 0 138px;
+    }
+
+    ._colorBlack {
+      color: $txt_color;
+      @include max-screen($break_sp) {
+        color: #fff;
+      }
+    }
+  }
+
+  &-txt {
+    font-family: $main_font;
+    font-size: 42px;
+    letter-spacing: 0.04em;
+    color: transparent;
+    -webkit-text-stroke: 1px #333333;
+    position: absolute;
+    bottom: -195.5px;
+    padding: 0 10%;
+    @include max-screen($break_sp) {
+      display: none;
+    }
+    @include min-screen($break_pc) {
+      padding: 0 138px;
+    }
+  }
+
+  &-right-txt{
+    position: absolute;
+    right: 14px;
+    @include size_calc(right,.3rem ,1.4rem, 3px, 14px);
+    text-orientation: sideways;
+    transform: rotate(180deg);
+    bottom:50%;
+    writing-mode: vertical-lr;
+    font-family: $eng_font;
+    @include font_size_calc(.9rem ,1.2rem, 9px, 12px);
+    letter-spacing: 0.14em;
+    line-height: 2.22;
+  }
+}

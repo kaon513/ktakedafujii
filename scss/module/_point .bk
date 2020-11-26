@@ -1,0 +1,492 @@
+.point {
+  // overflow: hidden;
+  /* はみ出た部分は表示しない */
+  // position: relative;
+  background-color: rgba(#2A84AC, 0.38);
+  position: relative;
+  z-index: 0;
+
+  &::before {
+    // content: "";
+    // position: absolute;
+    // bottom: 290px;
+    // left: 0;
+    // z-index: -1;
+    // width: 0;
+    // height: 0;
+    // border-style: solid;
+    // border-width: 355px 0 0 100vw;
+    // border-color: transparent transparent transparent #fff;
+    //       content: "";
+    //       // background-color: blue;
+    //       width: 100%;
+    //       height: 120px;
+    //       position: absolute;
+    //       z-index: -1;
+    //       top:529px;
+    //
+    // display: block;
+    //
+    // left:0;
+    // bottom: 0;
+    // border-top: 60px solid transparent;
+    // border-left: 50vw solid #blue;
+    // border-right: 50vw solid transparent;
+    // border-bottom: 60px solid #blue;
+    // right: 0;
+    // top: 0;
+    // border-bottom: 60px solid transparent;  /* 透明 */
+    // border-right:  50vw solid transparent;  /* 透明 */
+    // border-left: 50vw solid #8B3DC5;  /* むらさき */
+    // border-top: 60px solid #8B3DC5;  /* むらさき */
+  }
+
+  &-content {
+    // position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    padding: 80.5px 0 64px;
+    max-width: 1280px;
+    // z-index: 1001;
+    width: 100%;
+  }
+
+  &-ttl {
+    @include ttl;
+  }
+
+  &-txt {
+    @include txt;
+  }
+
+  &-list {
+    display: flex;
+    padding: 0 138px;
+    @include padding_size_calc(2rem, 13.8rem, 20px, 138px);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include max-screen($break_sp) {
+      margin: 129.5px 0;
+    }
+  }
+
+  &-item {
+    width: 32%;
+    // padding: 0 40px;
+    @include max-screen($break_sp) {
+      width: 100%;
+      padding-bottom: 90px;
+    }
+
+    &-txt {
+      font-size: 20px;
+      font-family: $sub_font;
+      @include font_size_calc(1.4rem ,2rem, 14px, 20px);
+      letter-spacing: 0.05em;
+      line-height: 1.75;
+      color: $txt_color;
+      @include max-screen($break_sp) {
+        font-size: 16px;
+      }
+      @include min-screen($break_pc) {
+        font-size: 20px;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  &-icon {
+    max-width: 70%;
+    margin: 0 auto;
+    @include max-screen($break_sp) {
+      max-width: 50%;
+    }
+  }
+
+  &-img {
+    @include max-screen($break_sp) {
+      display: none;
+    }
+
+    &-sp {
+      display: none;
+      @include max-screen($break_sp) {
+        display: block;
+      }
+    }
+  }
+  //
+  // &-img{
+  //   display: flex;
+  //
+  //   &-inner{
+  //       flex: 1;
+  //   }
+  //}
+  &-what {
+    display: flex;
+    background-color: #fff;
+    // margin-top:165px;
+    margin-top: 85px;
+    position: relative;
+    @include max-screen($break_sp) {
+      margin-top: 51px;
+    }
+    //&::after {
+    // content: '';
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    // /*四角形を傾けます*/
+    // transform: skewY(15deg); // transform-origin: bottom left;
+    // transform-origin: bottom right;
+    // z-index: -1;
+    // width: 100%;
+    // height: 300%;
+    // background: #fff;
+    //}
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: -320px;
+      // bottom: -320px;
+      border-top: 320px solid transparent;
+      border-left: 100vw solid #fff;
+      border-right: 100vw solid transparent;
+      border-bottom: 320px solid #fff;
+      @include max-screen($break_sp) {
+        top: -130px;
+        border-top: 130px solid transparent;
+        border-bottom: 130px solid #fff;
+      }
+    }
+
+    &-inner {
+      flex: 1;
+    }
+
+    &-txt {
+      width: 60%;
+      max-width: 665px;
+      // padding: 165px 0 42px;
+      padding: 85px 0 42px;
+      // padding: 0 0 42px;
+      font-size: 21px;
+      @include font_size_calc(1.6rem ,2.1rem, 16px, 21px);
+      letter-spacing: 0.12em;
+      line-height: 2.23;
+      color: $txt_color;
+      @include max-screen($break_sp) {
+        font-size: 16px;
+        top: -106px;
+        line-height: 2;
+        width: 100%;
+        padding: 51px 20px 42px;
+        // margin-top:51px;
+        padding: 0 20px 42px;
+      }
+      @include min-screen($break_pc) {
+        font-size: 21px;
+      }
+    }
+  }
+
+  &-pic {
+    display: flex;
+    //
+    // &::before {
+    //   content: '';
+    //   display: block;
+    //   position: absolute;
+    //   z-index: 100;
+    //   left: 0;
+    //   bottom: -320px;
+    //   border-top: 320px solid rgba(#2A84AC, 0.38);;
+    //   border-left: 100vw solid transparent;
+    //   border-right: 100vw solid rgba(#2A84AC, 0.38);;
+    //   border-bottom: 320px solid transparent;
+    // }
+    &-inner {
+      flex: 1;
+    }
+  }
+
+  &-slider {
+    position: absolute;
+    @include max-screen($break_sp) {
+      top: 200px;
+    }
+
+    &-slider_sp {
+      display: none;
+      @include max-screen($break_sp) {
+        display: block;
+        // position: absolute;
+        // top: 200px;
+      }
+    }
+  }
+}
+
+.slide {
+  &-item {
+    width: 733px;
+    width: 20%; // height: 200px;
+    float: left;
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    // animation: slideshow 24s linear infinite forwards;
+    animation: slider 24s linear infinite forwards;
+
+    &:nth-child(2) {
+      animation-delay: 8s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 16s;
+    }
+
+    &:last-child {
+      left: 0;
+      opacity: 0;
+      z-index: 10;
+      animation: noslide 10s forwards;
+      position: relative;
+    }
+  }
+}
+
+.loop {
+  &-wrap {
+    display: flex;
+    width: 100vw;
+    height: 300px;
+    // overflow: hidden;
+  }
+
+  &-txt {
+    // width: 200vw;
+    // display: inline-block;
+    // text-align: center;
+    font-size: 200px;
+    @include font_size_calc(6.4rem ,20rem, 64px, 200px);
+    letter-spacing: 0.04em;
+    line-height: 2.22;
+    color: rgba(#2A84AC,0.11);
+    // &:first-child {
+    //   // animation: loop 8s -4s linear infinite;
+    //   animation: loop 7.8s linear infinite;
+    // }
+    //
+    // &:last-child {
+    //   // animation: loop2 8s linear infinite;
+    //   animation: loop2 8s linear infinite;
+    // }
+    // animation: scroll $animationSpeed linear infinite;
+    // display: flex;
+    // width: calc(250px * 14);
+  }
+}
+$animationSpeed: 40s;
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 7));
+    @include max-screen($break_sp) {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+}
+
+.slider {
+  width: 100%;
+  height: 435px;
+  height: 33.9vw;
+  overflow: hidden;
+  margin: 0 auto;
+
+  &-wrapper {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // width: 100%;
+    // height: 400px;
+    position: relative;
+    left: 0;
+    will-change: transform;
+    // animation: slider 20s infinite;
+  }
+  @keyframes slider {
+    0% {
+      left: 100%;
+    }
+
+    5% {
+      left: 0;
+    }
+
+    33.33333% {
+      left: 0;
+    }
+
+    38.33333% {
+      left: -100%;
+    }
+
+    100% {
+      left: -100%;
+    }
+  }
+  @keyframes noslide {
+    0% {
+      opacity: 1;
+      left: 0;
+    }
+
+    30% {
+      opacity: 1;
+      left: 0;
+    }
+
+    51% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+  // margin: 100px auto;
+  // width: 80%;
+  &-txt {
+    width: 50%;
+    text-align: center;
+    font-size: 200px;
+    @include font_size_calc(6.4rem ,20rem, 64px, 200px);
+    letter-spacing: 0.04em;
+    line-height: 2.22;
+    color: rgba(#2A84AC,0.11);
+  }
+
+  &-bg-inner {
+    width: 100%;
+    // padding-top: 56.25%;
+    height: 100px;
+    // position: relative;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-color: rgba(#2A84AC,.38);
+  }
+  // @for $i from 1 to 3 {
+  //   &_item#{$i} {
+  //     background-image: url("http://takblog.site/wp-content/themes/takblog/assets/img/blanks/post19_#{$i}.jpg");
+  //   }
+  // }
+}
+// .swiper-container-fade .swiper-slide {
+//     opacity: 0 !important;
+//     visibility: hidden !important;
+//     .slide-inner {
+//       opacity: 0; // slideの中のインナーにアニメーションを設定する
+//       transition: opacity .5s ease-in;
+//     }
+//     &.swiper-slide-active {
+//       opacity: 1 !important;
+//       visibility: visible !important;
+//       .slide-inner {
+//         opacity: 1;
+//       }
+//     }
+//   }
+
+.slider img {
+  height: auto;
+  width: 100%;
+}
+/*slick setting*/
+
+.slick-next:before,
+.slick-prev:before {
+  color: #000;
+}
+
+point-slider {
+  align-items: center;
+  background: #E3E3E3;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+@mixin white-gradient {
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+$animationSpeed: 20s; // Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+}
+// Styling
+
+.slider {
+  height: 244px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  @include max-screen($break_sp) {
+      height: 78px;
+  }
+
+  .slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    // width: calc(250px * 14);
+    width: calc(872px * 14);
+    @include max-screen($break_sp) {
+      width: calc(279px * 14);
+    }
+  }
+
+  .slide {
+    height: 244px;
+    // width: 250px;
+    width: 872px;
+    @include max-screen($break_sp) {
+      width: 279px;
+        height: 78px;
+    }
+
+    &-txt {
+      font-size: 200px;
+      // @include font_size_calc(6.4rem ,20rem, 64px, 200px);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      color: rgba(#2A84AC,0.11);
+      @include max-screen($break_sp) {
+        font-size: 64px;
+      }
+    }
+  }
+}

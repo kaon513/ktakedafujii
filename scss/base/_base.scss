@@ -1,0 +1,45 @@
+//共通部分
+html {
+  // font-size: 0.78vw;
+  font-size: 62.5%; //10px;
+  // @include max-screen($break_sp) {
+  //     font-size: 1vw;
+  // }
+}
+body {
+  width: 100%;
+  // background-color: $accent_color;
+  @include txt_font();
+  position: relative;
+}
+
+li {
+  list-style: none;
+}
+
+img{
+  width: 100%;
+}
+
+.bgline{
+  position: absolute;
+  border-left: 1px solid rgba(#F0F0F0, 0.47);
+  height: 100%;
+
+  &:nth-child(1){
+    left:138px;
+    @include size_calc(left, 2.2rem,13.8rem,22px ,138px);
+  }
+  &:nth-child(2){
+    left:472px;
+    @include size_calc(left, 13.2rem, 47.2rem,132.5px ,472px);
+  }
+  &:nth-child(3){
+    right:472px;
+    @include size_calc(right, 13.2rem,47.2rem,132.5px ,472px);
+  }
+  &:nth-child(4){
+    right: 138px;
+    @include size_calc(right, 2.2rem,13.8rem,22px ,138px);
+  }
+}

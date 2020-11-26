@@ -1,0 +1,236 @@
+.point {
+  background-color: rgba(#2A84AC, 0.38);
+  position: relative;
+  z-index: 0;
+
+  &-content {
+    // position: absolute;
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    padding: 80.5px 0 64px;
+    max-width: 1280px;
+    // z-index: 1001;
+    width: 100%;
+    // overflow: hidden;
+  }
+
+  &-ttl {
+    @include ttl;
+  }
+
+  &-txt {
+    @include txt;
+  }
+
+  &-list {
+    display: flex;
+    padding: 0 138px;
+    @include padding_size_calc(2rem, 13.8rem, 20px, 138px);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include max-screen($break_sp) {
+      margin: 129.5px 0 50px;
+    }
+  }
+
+  &-item {
+    width: 32%;
+    // padding: 0 40px;
+    @include max-screen($break_sp) {
+      width: 100%;
+      padding-bottom: 90px;
+    }
+
+    &-txt {
+      font-size: 20px;
+      font-family: $sub_font;
+      @include font_size_calc(1.4rem ,2rem, 14px, 20px);
+      letter-spacing: 0.05em;
+      line-height: 1.75;
+      color: $txt_color;
+      @include max-screen($break_sp) {
+        font-size: 16px;
+      }
+      @include min-screen($break_pc) {
+        font-size: 20px;
+      }
+
+      span {
+        display: block;
+      }
+    }
+  }
+
+  &-icon {
+    max-width: 70%;
+    margin: 0 auto;
+    @include max-screen($break_sp) {
+      max-width: 50%;
+    }
+  }
+
+  &-img {
+    @include max-screen($break_sp) {
+      display: none;
+    }
+
+    &-sp {
+      display: none;
+      @include max-screen($break_sp) {
+        display: block;
+      }
+    }
+  }
+
+  &-what {
+    display: flex;
+    background-color: #fff;
+    // margin-top:165px;
+    margin-top: 85px;
+    position: relative;
+    @include max-screen($break_sp) {
+      margin-top: 51px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: -320px;
+      // bottom: -320px;
+      border-top: 320px solid transparent;
+      border-left: 100vw solid #fff;
+      border-right: 0 solid transparent;
+      border-bottom: 0px solid #fff;
+      @include max-screen($break_sp) {
+        top: -130px;
+        border-top: 130px solid transparent;
+        border-bottom: 130px solid #fff;
+      }
+    }
+
+    &-inner {
+      flex: 1;
+    }
+
+    &-txt {
+      width: 60%;
+      max-width: 665px;
+      // padding: 165px 0 42px;
+      padding: 85px 0 42px;
+      // padding: 0 0 42px;
+      font-size: 21px;
+      @include font_size_calc(1.6rem ,2.1rem, 16px, 21px);
+      letter-spacing: 0.12em;
+      line-height: 2.23;
+      color: $txt_color;
+      @include max-screen($break_sp) {
+        font-size: 16px;
+        top: -106px;
+        line-height: 2;
+        width: 100%;
+        padding: 51px 20px 42px;
+        // margin-top:51px;
+        padding: 0 20px 42px;
+      }
+      @include min-screen($break_pc) {
+        font-size: 21px;
+      }
+    }
+  }
+
+  &-pic {
+    display: flex;
+    &-inner {
+      flex: 1;
+    }
+  }
+
+  &-slider {
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    max-width: 100%;
+    @include max-screen($break_sp) {
+      top:200px;
+    }
+
+    &_sp {
+      display: none;
+      position: absolute;
+        max-width: 100%;
+      @include max-screen($break_sp) {
+        display: block;
+        bottom: 100px;
+      }
+    }
+  }
+}
+
+$animationSpeed: 40s; // Animation
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-872px * 7));
+  }
+
+}
+
+@include max-screen($break_sp) {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(calc(-279px * 7));
+    }
+  }
+}
+// Styling
+
+.slider {
+  height: 244px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  @include max-screen($break_sp) {
+    height: 78px;
+  }
+
+  .slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    // width: calc(250px * 14);
+    width: calc(872px * 14);
+    @include max-screen($break_sp) {
+      width: calc(279px * 14);
+    }
+  }
+
+  .slide {
+    width: 872px;
+    height: 244px;
+    @include max-screen($break_sp) {
+      width: 279px;
+      height: 78px;
+    }
+
+    &-txt {
+      font-size: 200px;
+      // @include font_size_calc(6.4rem ,20rem, 64px, 200px);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      color: rgba(#2A84AC,0.11);
+      @include max-screen($break_sp) {
+        font-size: 64px;
+      }
+    }
+  }
+}

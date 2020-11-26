@@ -1,0 +1,119 @@
+.flow {
+  display: flex;
+  // background-color: #2A84AC;
+  padding: 88px 0;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    background-color: #2A84AC;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    bottom: 200px;
+    width: 100%;
+    padding-bottom: 200px;
+  }
+
+  &-inner {
+    flex: 1;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: #fff;
+      width: 68%;
+      height: 190px;
+      top: -88px;
+      right: 0; // @include max-screen($break_sp) {
+      @include max-screen(900px) {
+        display: none;
+      }
+    }
+  }
+
+  &-ttl {
+    @include ttl;
+  }
+
+  &-txt {
+    @include txt(20);
+    color: #FEE757;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    @include max-screen($break_sp) {
+      margin-top: 34px;
+    }
+    // position: relative;
+  }
+
+  &-item {
+    // position: absolute;
+    // margin:0 auto;
+    // flex: 1;
+    width: 25%;
+    @include max-screen($break_sp) {
+      width: 50%;
+    }
+
+    &:nth-child(1) {
+      background-color: #fff;
+    }
+
+    &:nth-child(2) {
+      background-color: #F5F5F5;
+    }
+
+    &:nth-child(3) {
+      background-color: #DDDDDD;
+    }
+
+    &:nth-child(4) {
+      background-color: #D0D0D0;
+    }
+  }
+
+  &-step {
+    position: relative;
+    text-align: center;
+
+    &-txt {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      @include txt(38);
+      width: fit-content;
+      @include max-screen($break_sp) {
+        font-size: 21px;
+      }
+    }
+
+    span {
+      display: inline-block;
+      // height: 350px;
+      font-family: $eng_font;
+      @include font_size_calc(13.3rem ,18rem, 133px, 180px);
+      color: transparent;
+      -webkit-text-stroke: 1px rgba($txt_color,.3);
+      // position: relative;
+      letter-spacing: 0.04em;
+      // line-height: 1.75;
+      &::before {
+        content: "STEP";
+        @include font_size_calc(5.9rem ,8rem, 59px, 80px);
+        // color: transparent;
+        // -webkit-text-stroke: 1px $txt_color;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

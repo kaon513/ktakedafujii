@@ -1,0 +1,18 @@
+.header {
+  &-inner {
+    display: flex;
+    padding: 52px 48.5px;
+    @include max-screen($break_sp) {
+      padding: 34.5px 22.5px;
+    }
+  }
+
+  &-ttl {
+    font-family: $main_font;
+    font-size: 32px;
+    letter-spacing: 0.04em;
+    @include max-screen($break_sp) {
+      font-size: 14px;
+    }
+  }
+}
