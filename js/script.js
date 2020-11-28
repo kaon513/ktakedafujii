@@ -119,3 +119,9 @@ $(function() {
 const menu = document.querySelector('.js-menu');
 menu.classList.toggle('menu--open');
 });
+
+$(".hover").mouseleave(
+  function() {
+    $(this).removeClass("hover");
+  }
+);

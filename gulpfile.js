@@ -4,29 +4,55 @@ var gulp = require("gulp");
 //   console.log('HelloWorld!');
 //   done();
 // });
-
-var browserSync  = require('browser-sync');
-
 try { fsevents = require('fsevents'); } catch (error) {}
 
-gulp.task('browser-sync', function() {
-  browserSync.init({
-      server: {
-          baseDir: "./",
-          index: "index.html"
-      }
-  });
-});
+// var browserSync  = require('browser-sync');
+//
+// gulp.task('browser-sync', function() {
+//   browserSync.init({
+//       server: {
+//           baseDir: "./",
+//           index: "index.html"
+//       }
+//   });
+// });
+//
+// gulp.task('bs-reload', function () {
+//   browserSync.reload();
+// });
+//
+// gulp.task( 'default', gulp.series( gulp.parallel( 'browser-sync' ) ), function() {
+//   gulp.watch( './*.html', gulp.task( 'bs-reload' ) );
+//   gulp.watch( './css/*.css', gulp.task( 'bs-reload' ) );
+//   gulp.watch( './js/*.js', gulp.task( 'bs-reload' ) );
+// });
 
-gulp.task('bs-reload', function () {
-  browserSync.reload();
-});
+const { src, dest, watch, parallel } = require("gulp"),
+ browsersync = require('browser-sync').create();
 
-gulp.task( 'default', gulp.series( gulp.parallel( 'browser-sync' ) ), function() {
-  gulp.watch( './*.html', gulp.task( 'bs-reload' ) );
-  gulp.watch( './css/*.css', gulp.task( 'bs-reload' ) );
-  gulp.watch( './js/*.js', gulp.task( 'bs-reload' ) );
-});
+const taskServer = (done) => {
+ browsersync.init({
+  server: {
+   baseDir: './',
+   index: 'index.html'
+  },
+  port: 2000
+ })
+ done();
+};
+
+const taskReload = (done) => {
+ browsersync.reload();
+ done();
+};
+
+// Wacth
+const taskWatch = (done) => {
+ watch('./**/*', taskReload);
+ done();
+}
+
+exports.default = parallel(taskServer, taskWatch);
 
 // var sass = require("gulp-sass");
 //
@@ -44,15 +70,7 @@ gulp.task( 'default', gulp.series( gulp.parallel( 'browser-sync' ) ), function()
 //   gulp.watch('./sass/**/*.scss', ['sass']);
 // });
 
-var cleanCSS = require('gulp-clean-css');
-var rename   = require("gulp-rename");
 
-gulp.task('mincss', function() {
-  return gulp.src("css/*.css")
-    .pipe(cleanCSS())
-    .pipe(rename({ suffix: '.min' }))
-    .pipe(gulp.dest('css/'));
-});
 
 var uglify = require('gulp-uglify');
 var rename = require("gulp-rename");
@@ -91,23 +109,34 @@ gulp.task( 'imagemin', function() {
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
+var cleanCSS = require('gulp-clean-css');
+var rename   = require("gulp-rename");
+
+// gulp.task('mincss', function() {
+//   return gulp.src("css/*.css")
+//     .pipe(cleanCSS())
+//     .pipe(rename({ suffix: '.min' }))
+//     .pipe(gulp.dest('css/'));
+// });
+
 gulp.task('sass', function() {
   // return gulp.src('./scss/**/*.scss')
   return gulp.src('./scss/style.scss')
-    .pipe(sass({outputStyle: 'expanded'}))
+    // .pipe(sass({outputStyle: 'expanded'}))
+    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('./css'));
-
-  gulp.task( 'mincss' );
+    // .pipe(gulp.dest('./css'));
 });
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 
-gulp.task('sass', function() {
-  return gulp.src('./scss/**/*.scss')
-    .pipe(sass({outputStyle: 'expanded'}))
-    .pipe(gulp.dest('./css'));
-});
+// gulp.task('sass', function() {
+//   return gulp.src('./scss/**/*.scss')
+//     .pipe(sass({outputStyle: 'expanded'}))
+//     .pipe(gulp.dest('./css'));
+// });
 
 gulp.task( 'watch', function() {
   gulp.watch( './scss/**/*.scss', gulp.task( 'sass' ) );
