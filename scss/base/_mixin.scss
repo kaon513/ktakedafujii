@@ -147,15 +147,15 @@
 
 }
 
-@mixin txt_font($margin_bottom:false) {
-  font-size: clamp(16px ,2rem, 20px);
-  line-height: 2;
-  font-family: $sub_font;
-  letter-spacing: 0;
-  color: $txt_color;
-  text-align: left;
-  font-weight: 300;
-  @if $margin_bottom {
-    margin-bottom: clamp(20px ,4rem, 40px);
-  }
-}
+// @mixin txt_font($margin_bottom:false) {
+//   font-size: clamp(16px ,2rem, 20px);
+//   line-height: 2;
+//   font-family: $sub_font;
+//   letter-spacing: 0;
+//   color: $txt_color;
+//   text-align: left;
+//   font-weight: 300;
+//   @if $margin_bottom {
+//     margin-bottom: clamp(20px ,4rem, 40px);
+//   }
+// }

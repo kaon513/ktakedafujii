@@ -79,3 +79,36 @@ img{
     transform: scale(0, 1)
   }
 }
+
+.outline {
+  position: absolute;
+  z-index: -1;
+  left: calc(50% + 5px);
+  top: -4px;
+  transform: translateX(-50%);
+  display: inline-block;
+  color: $accent_color;
+  /* 文字の色 */
+  font-size: clamp(30px,6rem, 60px);
+  /* 文字のサイズ */
+  letter-spacing: 0;
+  /* 文字間 */
+  line-height: 1.33;
+  text-shadow: 1px 1px 0 $main_color, -1px 1px 0 $main_color, 1px -1px 0 $main_color, -1px -1px 0 $main_color, 1px 0 0 $main_color, 0 1px 0 $main_color, -1px 0 0 $main_color, 0 -1px 0 $main_color;
+  /* 文字の影 */
+  &_title {
+    // h2 {
+    font-family: $main_font;
+    font-size: clamp(30px,6rem, 60px);
+    letter-spacing: 0;
+    line-height: 1.33;
+    color: $title_color;
+    position: relative;
+    z-index: 2;
+    // display: inline-block;
+    // width: fit-content;
+    margin: 0 auto;
+
+
+  }
+}
