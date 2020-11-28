@@ -245,7 +245,7 @@ $color-4: #BEF2E5;
 
       .menu__item__bg-container {
         // background-image: url(https://picsum.photos/800/600?image=#{$i * 11});
-        background-image: url("../../img/menu_#{$i}.jpg")
+        background-image: url("../img/menu_#{$i}.jpg")
       }
 
       .menu__item__content {
