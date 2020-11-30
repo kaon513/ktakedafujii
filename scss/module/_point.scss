@@ -1,7 +1,29 @@
 .point {
-  background-color: rgba(#2A84AC, 0.38);
+  // background-color: rgba(#2A84AC, 0.38);
+      background-color: #fff;
   position: relative;
   z-index: 0;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: -100px;
+    right: 0;
+    border-top: 100px solid transparent;
+    border-left: 100vw solid #fff;
+    border-right: 0 solid transparent;
+    border-bottom: 0px solid #fff;
+
+    @include max-screen($break_sp) {
+      top: -130px;
+      border-top: 130px solid transparent;
+      // border-bottom: 130px solid #fff;
+      border-bottom: 130px solid rgba(#2A84AC, 0.38);
+    }
+  }
+
 
   &-content {
     // position: absolute;
@@ -25,7 +47,7 @@
 
   &-list {
     display: flex;
-    padding: 0 138px;
+    padding: 100px 138px;
     @include padding_size_calc(2rem, 13.8rem, 20px, 138px);
     justify-content: space-between;
     flex-wrap: wrap;
@@ -85,7 +107,8 @@
 
   &-what {
     display: flex;
-    background-color: #fff;
+    // background-color: #fff;
+    background-color: rgba(#2A84AC, 0.38);
     // margin-top:165px;
     margin-top: 85px;
     position: relative;
@@ -98,16 +121,18 @@
       display: block;
       position: absolute;
       z-index: -1;
-      top: -320px;
-      // bottom: -320px;
-      border-top: 320px solid transparent;
-      // border-left: 100vw solid #fff;
+      top: -100px;
+      right: 0;
+      border-top: 100px solid transparent;
+      border-left: 100vw solid rgba(42,132,172,0.38);
       border-right: 0 solid transparent;
-      border-bottom: 0px solid #fff;
+      border-bottom: 0px solid rgba(42,132,172,0.38);
+
       @include max-screen($break_sp) {
         top: -130px;
         border-top: 130px solid transparent;
-        border-bottom: 130px solid #fff;
+        // border-bottom: 130px solid #fff;
+        border-bottom: 130px solid rgba(#2A84AC, 0.38);
       }
     }
 
@@ -148,25 +173,7 @@
     }
   }
 
-  &-slider {
-    overflow: hidden;
-    position: absolute;
-    top: 0px;
-    max-width: 100%;
-    @include max-screen($break_sp) {
-      top:200px;
-    }
 
-    &_sp {
-      display: none;
-      position: absolute;
-        max-width: 100%;
-      @include max-screen($break_sp) {
-        display: block;
-        bottom: 100px;
-      }
-    }
-  }
 }
 
 $animationSpeed: 40s; // Animation

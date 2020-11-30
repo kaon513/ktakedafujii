@@ -2,18 +2,40 @@
   display: flex;
   background-color: rgba(#2A84AC,.38);
   position: relative;
+  padding-top: 80.5px;
   @include size_calc(padding-bottom, 9.5rem, 19.3rem, 95px, 193px);
 
-  &::before {
-    content: "";
-    background-color: rgba(#2A84AC,.38);
-    position: absolute;
-    top: -10px;
-    z-index: 0;
-    top: -200px;
-    width: 100%;
-    padding-top: 200px;
-  }
+  // &::before {
+  //   content: "";
+  //   background-color: rgba(#2A84AC,.38);
+  //   position: absolute;
+  //   top: -10px;
+  //   z-index: 0;
+  //   top: -200px;
+  //   width: 100%;
+  //   padding-top: 200px;
+  // }
+  &-slider {
+      overflow: hidden;
+      position: absolute;
+      top: 0px;
+      max-width: 100%;
+      @include max-screen($break_sp) {
+        top:200px;
+      }
+
+      &_sp {
+        display: none;
+        position: absolute;
+          max-width: 100%;
+        @include max-screen($break_sp) {
+          display: block;
+          bottom: 100px;
+        }
+      }
+    }
+
+
 
   .side {
     &-txt {
@@ -30,6 +52,7 @@
     @include size_calc(padding-right, 2rem, 13.8rem, 20px, 138px);
     max-width: 1142px;
     margin: 0 auto;
+    text-align: center;
   }
 
   &-ttl {
@@ -61,6 +84,7 @@
     padding-right: 140px;
     @include padding_size_calc(0rem, 7rem, 0px, 70px);
     color: #fff;
+    text-align: left;
 
     &-txt {
       // font-size: 14px;

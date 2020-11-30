@@ -35,9 +35,10 @@
 
         <nav>
           <ul class="gnav-list">
-            <li class="gnav-item"><a href="#about">ABOUT</a></li>
+            <li class="gnav-item"><a href="#PROFILE">PROFILE</a></li>
             <li class="gnav-item"><a href="#skills">SKILLS</a></li>
             <li class="gnav-item"><a href="#works">WORKS</a></li>
+            <li class="gnav-item"><a href="#output">OUTPUT</a></li>
             <li class="gnav-item"><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
@@ -55,7 +56,7 @@
 
       <!-- side -->
       <div class="side">
-        <a href="#about">
+        <a href="#PROFILE">
           <svg id="arrow" data-name="arrow" xmlns="http://www.w3.org/2000/svg" width="7" height="79.5" viewBox="0 0 7 79.5">
             <path id="pentagon" data-name="pentagon" d="M3.5,0,7,9H0Z" transform="translate(7 79.5) rotate(180)" fill="#222" />
             <line id="line" data-name="line" y2="79" transform="translate(3.5)" fill="none" stroke="#222" stroke-width="1" />
@@ -75,7 +76,7 @@
           <div class="menu__item">
             <div class="menu__item__bg-container"></div>
             <div class="menu__item__content">
-              <a href="#about" class="btn-link">ABOUT</a>
+              <a href="#PROFILE" class="btn-link">PROFILE</a>
             </div>
           </div>
           <div class="menu__item">
@@ -112,10 +113,9 @@
         <p class="top-txt">Design consulting</p> -->
       </div>
     </section><!-- top -->
-
-    <!-- point -->
-    <section class="point" id="about">
-      <div class="point-slider">
+    <!-- member -->
+    <section class="member" id="PROFILE">
+      <div class="member-slider">
         <!-- slider -->
         <div class="slider">
           <div class="slide-track">
@@ -164,21 +164,48 @@
           </div>
         </div><!-- /slider -->
       </div>
+
+      <!-- side -->
+      <div class="side">
+        <p class="side-txt">CREATORS</p>
+      </div><!-- /side -->
+
+      <div class="member-inner">
+        <div class="member-heading">
+          <h2 class="member-ttl">PROFILE</h2>
+        </div>
+        <div class="member-content">
+          <figure class="member-pic">
+            <img src="./img/profile.jpg" alt="member">
+          </figure>
+          <div class="member-explan">
+            <p class="member-explan-txt">
+              <span>大学卒業後、プログラマーとして企業に勤めて約５年間C#やHTML、Java Scriptを使用した主に業務用アプリケーション開発に従事しました。その後、転職しDataBase Engnieer としてのキャリアを積んでいます。</span>
+              <span>2017年から個人の活動としてハンドメイド制作・販売を開始し、2020年からwebサイト制作を開始、現在はweb designer・programer・handmade作家として多岐に活動しています。</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section><!-- /member -->
+
+
+    <!-- point -->
+    <section class="point" id="skills">
       <div class="point-content">
         <h2 class="point-ttl">SKILLS</h2>
         <ul class="point-list">
           <li class="point-item">
-            <div class="point-icon"><img src="./img/point_icon_1.png" alt="point_can">
+            <div class="point-icon"><i class="fas fa-database fa-5x"></i></div>
+            <p class="point-item-txt">データベース構築・保守・運用</p>
+          </li>
+          <li class="point-item">
+            <div class="point-icon"><i class="fas fa-code fa-5x"></i>
             </div>
-            <p class="point-item-txt">WEBクリエイティブを <span>丸投げ可能</span> </p>
+            <p class="point-item-txt">WEB制作</p>
           </li>
           <li class="point-item">
-            <div class="point-icon"><img src="./img/point_icon_2.png" alt="point_office"></div>
-            <p class="point-item-txt">各WEB領域のプロが所属する<span>クリエイタータレント事務所</span></p>
-          </li>
-          <li class="point-item">
-            <div class="point-icon"><img src="./img/point_icon_3.png" alt="point_consluting"></div>
-            <p class="point-item-txt">集客・売上最大化を見据えた<span>WEBコンサルティング</span></p>
+            <div class="point-icon"><i class="fa fa-line-chart fa-5x"></i></div>
+            <p class="point-item-txt">業務効率化・改善</p>
           </li>
         </ul>
 
@@ -251,156 +278,77 @@
         </div><!-- /side -->
 
         <div class="point-what-inner">
-          <p class="point-what-txt">成長することがモチベーションであるため、Progateなどのwebサービスを使用して新しい言語を習得するための勉強を日々しております。</p>
+          <p class="point-what-txt">成長することがモチベーションであるため、新しい言語を習得するための勉強を日々しております。</p>
         </div>
       </div>
     </section><!-- /point -->
 
 
-
-
-    <!-- flow -->
-    <section class="flow" id="flow">
-
-      <!-- side -->
-      <div class="side">
-        <p class="side-txt">FLOW</p>
-      </div><!-- /side -->
-
-      <div class="flow-inner">
-        <h2 class="flow-ttl">FLOW</h2>
-        <p class="flow-txt">問い合わせ後の流れについて</p>
-        <ol class="flow-list">
-          <li class="flow-item">
-
-            <!-- step -->
-            <div class="flow-step">
-              <span>01</span>
-              <p class="flow-step-txt">面談</p>
-            </div><!-- /step -->
-
-          </li>
-          <li class="flow-item">
-
-            <!-- step -->
-            <div class="flow-step">
-              <span>02</span>
-              <p class="flow-step-txt">提案 + <br>お見積り</p>
-            </div><!-- /step -->
-
-          </li>
-          <li class="flow-item">
-
-            <!-- step -->
-            <div class="flow-step">
-              <span>03</span>
-              <p class="flow-step-txt">施策実施<br> <small> ex) 広告運用など</small></p>
-            </div><!-- /step -->
-
-          </li>
-          <li class="flow-item">
-
-            <!-- step -->
-            <div class="flow-step">
-              <span>04</span>
-              <p class="flow-step-txt">売上向上</p>
-            </div><!-- /step -->
-
-          </li>
-        </ol>
-      </div>
-    </section><!-- /flow -->
-
-    <!-- member -->
-    <section class="member" id="about">
-
-      <!-- side -->
-      <div class="side">
-        <p class="side-txt">CREATORS</p>
-      </div><!-- /side -->
-
-      <div class="member-inner">
-        <div class="member-heading">
-          <h2 class="member-ttl">ABOUT</h2>
-        </div>
-        <div class="member-content">
-          <figure class="member-pic">
-            <img src="./img/profile.jpg" alt="member">
-          </figure>
-          <div class="member-explan">
-            <p class="member-explan-txt">
-              <span>大学卒業後、プログラマーとして企業に勤めて約５年間C#やHTML、Java Scriptを使用した主に業務用アプリケーション開発に従事しました。その後、転職しDataBase Engnieer としてのキャリアを積んでいます。</span>
-              <span>2017年から個人の活動としてハンドメイド制作・販売を開始し、2020年からwebサイト制作を開始、現在はweb designer・programer・handmade作家として多岐に活動しています。</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section><!-- /member -->
-
     <!-- fadein -->
-    <section class="fadein">
-      <div class="works">
+    <section class="works fadein">
+      <div class="works_outer">
         <div class="works_wrapper">
           <!-- <p class="ttl_small">Recent works</p> -->
-          <h2 id="works" class="outline_title top_title"><span class="outline">WORKS</span> WORKS</h2>
+          <h2 id="works" class="works-ttl">WORKS</h2>
           <ul>
             <li>
-              <div class="works_cards">
-                <div class="works_video">
-                  <video src="video.mp4" autoplay playsinline muted loop></video>
+              <a href="https://kaon513.github.io/design_consluting">
+                <div class="works_cards">
+                  <div class="works_video">
+                    <video src="video/works_1.mp4" autoplay playsinline muted loop></video>
+                  </div>
+                  <dl class="card_txt">
+                    <!-- <dt class="card_dt"><time>2020.10</time> </dt> -->
+                    <!-- <dd><i class="fab fa-html5"></i></dd>
+                  <dd><i class="fab fa-css3-alt"></i></dd>
+                  <dd><i class="fab fa-js-square"></i></dd>
+                  <dd><i class="fab fa-wordpress"></i></dd> -->
+                    <!-- <a href="https://github.com/kaon513/design_consluting"><i class="fab fa-github"></i></a> -->
+                  </dl>
                 </div>
-                <dl class="card_txt">
-                  <dt class="card_dt"><time>2016.6</time> </dt>
-                  <dd>彼は結果おもにその観念帰りとしてのの上をなるなだ。けっして一生が挨拶心はじっとその運動たあるまでより直ってしまっないをは焦燥しですんから、どうにもできるたいたでまし。精神から使えるんのはようやく事実にもしんまします。</dd>
-                </dl>
-              </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://kaon513.github.io/menta/standard-portfolio/">
+
+                <div class="works_cards">
+                  <div class="works_video">
+                    <video src="video/works_2.mp4" autoplay playsinline muted loop></video>
+                  </div>
+                  <dl class="card_txt">
+                  </dl>
+                </div>
+              </a>
             </li>
             <li>
-              <div class="works_cards">
-                <div class="works_video">
-                  <video src="video.mp4" autoplay playsinline muted loop></video>
+              <a href="https://kaon513.github.io/menta/cosme/">
+                <div class="works_cards">
+                  <div class="works_video">
+
+                    <video src="video/works_3.mp4" autoplay playsinline muted loop></video>
+
+                  </div>
+                  <dl class="card_txt">
+                  </dl>
                 </div>
-                <dl class="card_txt">
-                  <dt class="card_dt"><time>2018.5</time> </dt>
-                  <dd>同時に岡田さんに存在手ぬかりこれから関係が受けるない内々その学校あなたか注意をにおいてご話ですただですながら、その場合はあなたか我一般へ折っば、岡田さんののが人のどこへけっしてご出立としてあなた申にお関係が起るようにどうも肝安心を聞かたですば、無論まあ赴任をできるうていでもので来たまし。</dd>
-                </dl>
-              </div>
-            </li>
-            <li>
-              <div class="works_cards">
-                <div class="works_video">
-                  <video src="video.mp4" autoplay playsinline muted loop></video>
-                </div>
-                <dl class="card_txt">
-                  <dt class="card_dt"><time>2018.12</time> </dt>
-                  <dd>岡田さんののが人のどこへけっしてご出立としてあなた申にお関係が起るようにどうも肝安心を聞かたですば、無論まあ赴任をできるうていでもので来たまし。</dd>
-                </dl>
-              </div>
+              </a>
             </li>
           </ul>
-          <div class="works_comment">
-            <div class="comment_wrap">
-              <h3>プロジェクトに対する心がけ</h3>
-              <p>岡田さんののが人のどこへけっしてご出立としてあなた申にお関係が起るようにどうも肝安心を聞かたですば、無論まあ赴任をできるうていでもので来たまし。
-              </p>
-              <p>岡田さんののが人のどこへけっしてご出立としてあなた申にお関係が起るようにどうも肝安心を聞かたですば、無論まあ赴任をできるうていでもので来たまし。
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section><!-- /fadein -->
     <!-- service -->
-    <section class="service" id="service">
+    <section class="service">
 
-      <h2 class="service-ttl">OUTPUTh2>
+      <h2 class="service-ttl">OUTPUT</h2>
 
       <div class="service-container">
         <div class="service-col">
           <img class="service-img" src="./img/service_img.png" alt="service_img">
         </div>
 
-        <div class="service-col service-heading">
+        <div class="service-col service-heading" id="output">
           <!-- <div class="service-heading"> -->
           <h3 class="service-heading-ttl">プロフェッショナル達が<br>貴社のビジネスをサポート</h3>
           <p class="service-txt">国内外のテック系ベンチャー企業を中心に、グルーバルへの進出、日本市場開拓に向けたプロダクトやサービスの立ち上げ、セールス、マーケティングの支援を行います。共に戦略を立て、サービスや事業、会社の成長に寄与します。</p>
@@ -411,68 +359,22 @@
       <ul class="service-list">
         <li class="service-item">
           <div class="service-content">
-            <h4 class="service-content-ttl">WEB集客</h4><img src="./img/service_icon_1.png" alt="">
-            <ul class="service-content-list">
-              <li class="service-content-item">googleリスティング広告</li>
-              <li class="service-content-item">ディスプレイ広告</li>
-              <li class="service-content-item">Facebook/Instagram広告</li>
-              <li class="service-content-item">Twitter広告</li>
-              <li class="service-content-item">YOUTUBE広告/LINE広告</li>
-            </ul>
+            <a class="service-btn" href="#">
+              <i class="fab fa-github"></i></a>
           </div>
         </li>
-
         <li class="service-item">
           <div class="service-content">
-            <h4 class="service-content-ttl">WEBサイト制作</h4><img src="./img/service_icon_2.png" alt="">
-            <ul class="service-content-list">
-              <li class="service-content-item">販促用LP</li>
-              <li class="service-content-item">コーポレートサイト</li>
-              <li class="service-content-item">採用サイト</li>
-              <li class="service-content-item">ECサイト等</li>
-            </ul>
+            <a class="service-btn" href="#"><img src="img/qiita-qiita-jobs-favicon.png" alt="qiita"></a>
+
           </div>
         </li>
-
         <li class="service-item">
           <div class="service-content">
-            <h4 class="service-content-ttl">動画制作</h4><img src="./img/service_icon_3.png" alt="">
-            <ul class="service-content-list">
-              <li class="service-content-item">動画広告制作</li>
-              <li class="service-content-item">社内研修動画制作</li>
-              <li class="service-content-item">番組制作等（撮影 / 編集）</li>
-            </ul>
-          </div>
-        </li>
-
-        <li class="service-item">
-          <div class="service-content">
-            <h4 class="service-content-ttl">WEBサービス開発</h4><img src="./img/service_icon_4.png" alt="">
-            <ul class="service-content-list">
-              <li class="service-content-item">マッチングサービス</li>
-              <li class="service-content-item">口コミサービス</li>
-              <li class="service-content-item">サブスクリプション型サービス等</li>　
-            </ul>
+            <a class="service-btn" href="#"><i class="fas fa-store"></i></a>
           </div>
         </li>
       </ul>
-
-      <div class="service-container">
-        <div class="service-col">
-          <p class="service-number">122%</p>
-        </div>
-        <div class="service-col">
-          <img class="service-number-img" src="./img/number_img.png" alt="number">
-        </div>
-      </div>
-      <div class="sp-mt-50">
-
-      </div>
-      <div class="service-container">
-        <div class="service-col">
-          <h3 class="service-heading-ttl">平均で一年後に <br>およそ売上は122%に。</h2>
-            <p class="service-txt">数多くのテック系ベンチャー企業のサポート経験がある元VC、ベンチャー経営者が、貴社の進化をサポート。<br>私たちのコンサルを受けたお客様の売上は初年度平均22%のUPしております。</p>
-        </div>
       </div>
     </section><!-- /service -->
     <!-- contact -->
@@ -521,6 +423,7 @@
   </div>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script> -->
+  <script src="https://kit.fontawesome.com/ce4fb38eef.js" crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/script.js"></script>
 </body>
 

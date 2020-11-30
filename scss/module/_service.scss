@@ -100,14 +100,30 @@
     display: flex;
     flex-wrap: wrap;
     margin: 127px auto;
+    justify-content:center;
   }
 
   &-item {
     letter-spacing: 0;
-    width: 25%;
+    // width: 25%;
+    flex: 1;
     @include max-screen($break_sp) {
       width: 50%;
     }
+  }
+
+  &-btn{
+    width: 100%;
+color: #fff;
+min-height: 106px;
+font-size: 19px;
+line-height: 1.2;
+border-radius: 9px;
+line-height: 1.4;
+margin-bottom: 32px;
+box-shadow: 0 20px 40px -10px rgba(0,0,0,0.12);
+cursor: pointer;
+    background: #565656;
   }
 
   &-content {
