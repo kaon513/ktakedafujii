@@ -107,8 +107,52 @@
     letter-spacing: 0;
     // width: 25%;
     flex: 1;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
     @include max-screen($break_sp) {
       width: 50%;
+
+
+    }
+
+    &::before{
+      font-family: "Font Awesome 5 Brands";
+      font-weight: 400;
+      font-size: 2em;
+      margin-right: 10px;
+      // display: none;
+    }
+
+
+  }
+  .github{
+    &::before{
+      content: "\f09b";
+      color: rgb(36,41,46);
+    }
+  }
+  .qiita{
+    &::before{
+        color: #00acee;
+
+      content: '';
+display: inline-block;
+width: 1em;
+height: 1em;
+vertical-align: text-bottom;
+background: url(./../img/qiita.png);
+background-size: 1em;
+// margin-left: 5px;
+    }
+  }
+  .store{
+    &::before{
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+       // font-family: "Font Awesome 5 Regular";
+      content: "\f54e";
+      color: #313711;
     }
   }
 
