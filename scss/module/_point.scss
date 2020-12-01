@@ -239,7 +239,8 @@ $animationSpeed: 40s; // Animation
       line-height: 1;
       color: rgba(#2A84AC,0.11);
       @include max-screen($break_sp) {
-        font-size: 64px;
+        // font-size: 64px;
+        font-size: 40px;
       }
     }
   }

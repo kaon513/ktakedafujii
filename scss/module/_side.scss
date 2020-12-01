@@ -3,6 +3,7 @@
   width: 10%;
   max-width: 138px;
   @include size_calc(width, 2.2rem, 13.8rem, 22px, 138px);
+    // @include size_calc(width, 6rem, 13.8rem, 60px, 138px);
   // transform-origin: left bottom;
   // transform: rotate(-90deg);
   align-self: flex-end;
