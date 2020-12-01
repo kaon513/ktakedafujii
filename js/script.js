@@ -49,11 +49,11 @@ $(function() {
     }
   });
 
-// $("nav").hide();
-// $(".gnav-hamburger").click(function(){//メニューボタンをクリックしたとき
-//     $("nav").toggle(300);//0.3秒で表示したり非表示にしたりする
-//
-// });
+  // $("nav").hide();
+  // $(".gnav-hamburger").click(function(){//メニューボタンをクリックしたとき
+  //     $("nav").toggle(300);//0.3秒で表示したり非表示にしたりする
+  //
+  // });
 
   $('.gnav-hamburger').click(function() {
     $(".gnav").toggleClass('active');
@@ -68,8 +68,8 @@ $(function() {
 
   $('.gnav-item').click(function() {
     $(".gnav").removeClass('active');
-      $('.gnav-list').removeClass('active');
-      $('.gnav-hamburger').removeClass('active');
+    $('.gnav-list').removeClass('active');
+    $('.gnav-hamburger').removeClass('active');
 
   });
 
@@ -116,8 +116,55 @@ $(function() {
     ]
   });
 
-const menu = document.querySelector('.js-menu');
-menu.classList.toggle('menu--open');
+  const menu = document.querySelector('.js-menu');
+  menu.classList.toggle('menu--open');
+
+  // // mordal
+  // let btn = document.getElementsByClassName('works_video');
+  // // btn[0].classList.toggle( "video_overray" ) ;
+  // // btn[0].classList.remove( "open") ;
+  // for (var i = 0, len = btn.length - 1 | 0; i < len; i = i + 1 | 0) {
+  //   btn[i].addEventListener('click', function(event) {
+  //     // let modal = document.getElementsByClassName('video_overray');
+  //     // result += "\n  " + allOrangeJuiceQuery[i].textContent;
+  //     // if (modal.style.display === 'block') {
+  //     //   modal.style.display = 'none';
+  //     // } else {
+  //     //   modal.style.display = 'block';
+  //     // }
+  //     // btn[0].classList.toggle( "video_overray" ) ;
+  //     let modal = event.firstElementChild;
+  //     if (modal[0].classList.contains("open")) {
+  //       modal[0].classList.remove("open");
+  //     } else {
+  //       modal[0].classList.add("open");
+  //     }
+  //   })
+  //   // modal.style.display = 'block';
+  // }
+
+  var trigger = document.getElementsByClassName("works_video");
+  var triggers = Array.from(trigger);
+
+  triggers.forEach(function(target) {
+
+    target.addEventListener('mouseenter', function() {
+      target.firstElementChild.style.display = 'block';
+    });
+
+    target.addEventListener('mouseleave', function() {
+      target.firstElementChild.style.display = 'none';
+    });
+  });
+
+  // let closeBtn = document.getElementsByClassName('overray_close');
+  //
+  // for (var j = 0, len = closeBtn.length | 0; j < len; j = j + 1 | 0) {
+  //   closeBtn[j].addEventListener('click', function() {
+  //     // result += "\n  " + allOrangeJuiceQuery[i].textContent;
+  //     modal[0].style.display = 'none';
+  //   })
+  // }
 });
 
 $(".hover").mouseleave(

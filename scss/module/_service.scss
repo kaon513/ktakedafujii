@@ -7,6 +7,7 @@
 
   &-ttl {
     @include ttl;
+    text-align: center;
   }
 
   &-container {
@@ -79,6 +80,7 @@
 
   &-txt {
     @include txt(18);
+    text-align: center;
   }
 
   &-number {
@@ -101,6 +103,10 @@
     flex-wrap: wrap;
     margin: 127px auto;
     justify-content:center;
+        margin-right: 2.5em;
+        @include max-screen($break_sp) {
+          justify-content: flex-end;
+        }
   }
 
   &-item {
@@ -110,12 +116,14 @@
     line-height: 1;
     cursor: pointer;
     text-align: center;
-    @include max-screen($break_sp) {
-      width: 50%;
+    // @include max-screen($break_sp) {
+    //   width: 100%;
+    //   flex: auto;
+    //   padding: 10px;
+    //   text-align: left;
+    // }
 
-
-    }
-
+a{
     &::before{
       font-family: "Font Awesome 5 Brands";
       font-weight: 400;
@@ -123,6 +131,7 @@
       margin-right: 10px;
       // display: none;
     }
+  }
 
 
   }

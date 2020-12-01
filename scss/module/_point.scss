@@ -16,12 +16,12 @@
     border-right: 0 solid transparent;
     border-bottom: 0px solid #fff;
 
-    @include max-screen($break_sp) {
-      top: -130px;
-      border-top: 130px solid transparent;
-      // border-bottom: 130px solid #fff;
-      border-bottom: 130px solid rgba(#2A84AC, 0.38);
-    }
+    // @include max-screen($break_sp) {
+    //   top: -130px;
+    //   border-top: 130px solid transparent;
+    //   // border-bottom: 130px solid #fff;
+    //   border-bottom: 130px solid rgba(#2A84AC, 0.38);
+    // }
   }
 
 
@@ -51,9 +51,9 @@
     @include padding_size_calc(2rem, 13.8rem, 20px, 138px);
     justify-content: space-between;
     flex-wrap: wrap;
-    @include max-screen($break_sp) {
-      margin: 129.5px 0 50px;
-    }
+    // @include max-screen($break_sp) {
+    //   margin: 129.5px 0 50px;
+    // }
   }
 
   &-item {
@@ -112,9 +112,9 @@
     // margin-top:165px;
     margin-top: 85px;
     position: relative;
-    @include max-screen($break_sp) {
-      margin-top: 51px;
-    }
+    // @include max-screen($break_sp) {
+    //   margin-top: 51px;
+    // }
 
     &::before {
       content: '';
@@ -128,16 +128,19 @@
       border-right: 0 solid transparent;
       border-bottom: 0px solid rgba(42,132,172,0.38);
 
-      @include max-screen($break_sp) {
-        top: -130px;
-        border-top: 130px solid transparent;
-        // border-bottom: 130px solid #fff;
-        border-bottom: 130px solid rgba(#2A84AC, 0.38);
-      }
+      // @include max-screen($break_sp) {
+      //   top: -130px;
+      //   border-top: 130px solid transparent;
+      //   // border-bottom: 130px solid #fff;
+      //   border-bottom: 130px solid rgba(#2A84AC, 0.38);
+      // }
     }
 
     &-inner {
       flex: 1;
+      @include max-screen($break_sp) {
+        padding-bottom: 100px;
+      }
     }
 
     &-txt {
