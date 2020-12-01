@@ -42,7 +42,8 @@
   }
   // figure {
   &_video {
-    width: 100%;
+    // width: 100%;
+    width: 45%;
     position: relative;
     overflow: hidden;
     height: 500px;
@@ -104,6 +105,8 @@
     // display: flex;
     // justify-content: space-between;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
     padding-top: clamp(10px, 7.9rem, 79px);
     padding-bottom: clamp(10px, 7.9rem, 79px);
     padding-left: 5vw;
