@@ -19,7 +19,7 @@
     position: absolute;
     // z-index:1;
     // top: 0;
-    bottom: 0px;
+    bottom: 0;
     left: 0;
   }
 
@@ -47,8 +47,10 @@
     @include max-screen($break_sp) {
       bottom: 10px;
       right: 10px;
-          padding: 17px 40px;
+      padding: 17px 40px;
+      transform: translate3d(0, 0, 0);
     }
+
     img {
       // height: 100vh;
       // height: 21px;
@@ -57,7 +59,7 @@
       width: auto;
       vertical-align: middle;
       @include max-screen($break_sp) {
-      padding-left: 17px;
+        padding-left: 17px;
       }
     }
 
@@ -129,16 +131,16 @@
     }
   }
 
-  &-right-txt{
+  &-right-txt {
     position: absolute;
     right: 14px;
     @include size_calc(right,.3rem ,1.4rem, 3px, 14px);
     text-orientation: sideways;
     transform: rotate(180deg);
-    bottom:50%;
+    bottom: 50%;
     writing-mode: vertical-lr;
     font-family: $eng_font;
-    @include font_size_calc(.9rem ,1.2rem, 9px, 12px);
+    @include font_size_calc(0.9rem ,1.2rem, 9px, 12px);
     letter-spacing: 0.14em;
     line-height: 2.22;
   }

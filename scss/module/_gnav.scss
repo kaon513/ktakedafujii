@@ -33,6 +33,7 @@
     @include max-screen($break_sp) {
       width: 64px;
       height: 64px;
+      transform: translate3d(0, 0, 0);
     }
 
     span {

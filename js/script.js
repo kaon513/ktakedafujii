@@ -165,6 +165,7 @@ $(function() {
   //     modal[0].style.display = 'none';
   //   })
   // }
+
 });
 
 $(".hover").mouseleave(
