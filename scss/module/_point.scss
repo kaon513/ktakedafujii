@@ -88,7 +88,7 @@
       text-align: left;
       font-size: 1.5rem;
       font-family: $sub_font;
-      @include font_size_calc(1rem ,1.5rem, 10px, 15px);
+      // @include font_size_calc(1rem ,1.5rem, 10px, 15px);
       letter-spacing: 0.05em;
       line-height: 1.75;
       color: $txt_color;
