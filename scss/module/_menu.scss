@@ -76,9 +76,12 @@ $color-4: #BEF2E5;
 // -webkit-text-fill-color: transparent;//くり抜いた部分は背景を表示
 // color: transparent;
 color: #fff;
+
 text-stroke: 1.5px  $main_color;;
 -webkit-text-stroke: 1.5px  $main_color;
-
+@include max-screen($break_sp) {
+  font-size:1.5rem;
+}
 
   &:before {
     content: '';
