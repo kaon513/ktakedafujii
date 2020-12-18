@@ -65,7 +65,10 @@
 
     &:hover {
       color: #fff;
-      background: #f56500;
+      // color: $main_color;
+      // background: #f56500;
+      // background: #FEE757;;
+      background: $main_color;
     }
   }
 

@@ -66,8 +66,8 @@ $(function() {
     }
   });
 
-  $('.gnav-item').click(function() {
-    $(".gnav").removeClass('active');
+  $('.menu').click(function() {
+    $(".menu").removeClass('active');
     $('.gnav-list').removeClass('active');
     $('.gnav-hamburger').removeClass('active');
 

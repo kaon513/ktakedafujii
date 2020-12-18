@@ -1,13 +1,15 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
-
+// @import url('https://fonts.googleapis.com/css?family=Lato');
+//font-family: 'Lato', sans-serif;
+//font-family: 'Roboto', sans-serif;
 $max_width: 1280px;
 $break_sp: 640px;
 $break_pc:1280px;
 $main_color: #2A84AC;
+// $main_color: #F6F6F6;
 $title_color: #FEE757;
 $txt_color: #222222;
 $accent_color: #F0F0F0;
-$main_font: 'Helvetica','Montserrat', sans-serif;
+$main_font: 'Lato','Montserrat', sans-serif;
 $sub_font: YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; // $yu_font: YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 // $eng_font: 'Noto Sans JP', sans-serif; /* 変数宣言 */
 $eng_font: 'Oswald', sans-serif;

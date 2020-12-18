@@ -1,0 +1,16 @@
+.works2{
+  &_list{
+    display: flex;
+scroll-snap-type:x mandatory;
+white-space: nowrap;
+overflow: auto;
+  }
+
+  &_item{
+    background-color: #fff;
+scroll-snap-align:center;
+diplay:inline-block;
+width: 20%;
+white-space: normal;
+  }
+}
