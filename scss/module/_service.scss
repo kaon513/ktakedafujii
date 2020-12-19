@@ -11,6 +11,7 @@
   }
 
   &-container {
+    margin-bottom: 2rem;
     display: flex;
     position: relative;
     @include max-screen($break_sp) {
@@ -101,18 +102,21 @@
   &-list {
     display: flex;
     flex-wrap: wrap;
-    margin: 127px auto;
-    justify-content:center;
-        margin-right: 2.5em;
-        @include max-screen($break_sp) {
-          justify-content: flex-end;
-        }
+    // margin: 127px auto;
+        margin: 80px auto;
+    justify-content: space-between;
+    margin-right: 2.5em;
+    @include max-screen($break_sp) {
+      justify-content: flex-end;
+    }
   }
 
   &-item {
+    padding: 1em;
+    background-color: #FAFBFB;
     letter-spacing: 0;
-    // width: 25%;
-    flex: 1;
+    width: 31%;
+    // flex: 1;
     line-height: 1;
     cursor: pointer;
     text-align: center;
@@ -123,59 +127,75 @@
     //   text-align: left;
     // }
 
-a{
-    &::before{
-      font-family: "Font Awesome 5 Brands";
-      font-weight: 400;
-      font-size: 2em;
-      margin-right: 10px;
-      // display: none;
+
+    &-tit {
+      font-size: 2rem;
+      line-height: 1.1em;
+    }
+
+    &-txt {
+      font-size: 1.6rem;
+      font-weight: 500;
+      display: block;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $txt_color;
+
+      &::before {
+        font-family: "Font Awesome 5 Brands";
+        font-weight: 400;
+        font-size: 2em;
+        margin-right: 20px;
+        // display: none;
+      }
     }
   }
 
-
-  }
-  .github{
-    &::before{
+  .github {
+    &::before {
       content: "\f09b";
       color: rgb(36,41,46);
     }
   }
-  .qiita{
-    &::before{
-        color: #00acee;
 
+  .qiita {
+    &::before {
+      color: #00acee;
       content: '';
-display: inline-block;
-width: 1em;
-height: 1em;
-vertical-align: text-bottom;
-background: url(./../img/qiita.png);
-background-size: 1em;
-// margin-left: 5px;
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      vertical-align: text-bottom;
+      background: url("./../img/qiita.png");
+      background-size: 1em; // margin-left: 5px;
     }
   }
-  .store{
-    &::before{
+
+  .store {
+    &::before {
       font-family: "Font Awesome 5 Free";
       font-weight: 900;
-       // font-family: "Font Awesome 5 Regular";
+      // font-family: "Font Awesome 5 Regular";
       content: "\f54e";
       color: #313711;
     }
   }
 
-  &-btn{
+  &-btn {
     width: 100%;
-color: #fff;
-min-height: 106px;
-font-size: 19px;
-line-height: 1.2;
-border-radius: 9px;
-line-height: 1.4;
-margin-bottom: 32px;
-box-shadow: 0 20px 40px -10px rgba(0,0,0,0.12);
-cursor: pointer;
+    color: #fff;
+    min-height: 106px;
+    font-size: 19px;
+    line-height: 1.2;
+    border-radius: 9px;
+    line-height: 1.4;
+    margin-bottom: 32px;
+    box-shadow: 0 20px 40px -10px rgba(0,0,0,0.12);
+    cursor: pointer;
     background: #565656;
   }
 
